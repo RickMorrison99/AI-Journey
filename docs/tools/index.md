@@ -36,6 +36,8 @@ Each tool category has a dedicated playbook with prompting patterns, safe-use ch
 | Playbook | Path |
 |---|---|
 | GitHub Copilot | [`docs/tools/github-copilot.md`](github-copilot.md) |
+| Copilot CLI Plugin Guide | [`docs/tools/copilot-plugin-guide.md`](copilot-plugin-guide.md) |
+| Copilot CLI Plugin Roadmap | [`docs/tools/copilot-plugin-roadmap.md`](copilot-plugin-roadmap.md) |
 | LLM Chat Tools | [`docs/tools/llm-chat.md`](llm-chat.md) |
 | Agentic Tools | [`docs/tools/agentic-tools.md`](agentic-tools.md) |
 | Custom AI Pipelines | [`docs/tools/custom-pipelines.md`](custom-pipelines.md) |

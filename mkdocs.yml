@@ -61,6 +61,8 @@ nav:
   - AI Tools & Playbooks:
       - Tool Landscape: tools/index.md
       - GitHub Copilot: tools/github-copilot.md
+      - Copilot CLI Plugin Guide: tools/copilot-plugin-guide.md
+      - Copilot CLI Plugin Roadmap: tools/copilot-plugin-roadmap.md
       - Agentic Tools: tools/agentic-tools.md
       - LLM Chat: tools/llm-chat.md
       - Custom Pipelines: tools/custom-pipelines.md

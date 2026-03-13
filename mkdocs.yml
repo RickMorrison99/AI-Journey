@@ -1,0 +1,87 @@
+site_name: "O&A AI Adoption Journey"
+site_description: "AI-Agentic adoption framework for the OSS - Orchestration and Automation team"
+site_author: "O&A Team"
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      auto_title: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - link: https://www.tmforum.org
+      icon: material/web
+
+nav:
+  - Home: index.md
+  - Philosophy: philosophy.md
+  - Getting Started:
+      - Baseline Survey: baseline-survey.md
+      - Maturity Model: maturity-model.md
+      - Adoption Roadmap: adoption-roadmap.md
+  - MSD Foundations:
+      - Overview: msd-foundations/index.md
+      - CI/CD Pipeline: msd-foundations/cicd-pipeline.md
+      - Testing Discipline: msd-foundations/testing-discipline.md
+      - Trunk-Based Dev: msd-foundations/trunk-based-dev.md
+      - Evolutionary Architecture: msd-foundations/evolutionary-architecture.md
+      - Cognitive Load: msd-foundations/cognitive-load.md
+      - Engineering Principles: msd-foundations/engineering-principles.md
+  - TM Forum & API-First:
+      - Overview: tmforum/index.md
+      - eTOM / TAM / ODA: tmforum/etom-tam-oda.md
+      - Open APIs: tmforum/open-apis.md
+      - Spec-First Workflow: tmforum/spec-first.md
+  - AI Tools & Playbooks:
+      - Tool Landscape: tools/index.md
+      - GitHub Copilot: tools/github-copilot.md
+      - Agentic Tools: tools/agentic-tools.md
+      - LLM Chat: tools/llm-chat.md
+      - Custom Pipelines: tools/custom-pipelines.md
+  - Measurement:
+      - Overview: measurement/index.md
+      - DORA Metrics: measurement/dora-metrics.md
+      - SPACE Framework: measurement/space-framework.md
+      - AI Adoption KPIs: measurement/ai-adoption-kpis.md
+      - Self-Reporting Templates: measurement/self-reporting.md
+      - Pipeline Telemetry: measurement/pipeline-telemetry.md
+  - Responsible AI:
+      - Overview: responsible-ai/index.md
+      - Privacy: responsible-ai/privacy.md
+      - Security: responsible-ai/security.md
+      - Environmental: responsible-ai/environmental.md
+      - Market Concentration: responsible-ai/market-concentration.md
+      - Global Transformation: responsible-ai/global-transformation.md
+  - Governance:
+      - Team Norms: governance/team-norms.md
+      - ADR Template: governance/adr-template.md
+  - Stakeholders:
+      - Executive Summary: stakeholders/executive-summary.md
+      - Architect's Elevator: stakeholders/architect-elevator.md
+      - Quarterly Review: stakeholders/quarterly-review.md

@@ -3,6 +3,9 @@
 > **Audience:** All O&A team members building or modifying services, network automation tools, or integration components.
 > **The rule:** The interface contract — YANG model, OpenAPI spec, AsyncAPI schema — is written and validated **before** implementation code is generated or reviewed.
 
+!!! info "See also: Spec-Driven AI Development"
+    Addy Osmani's framework for spec-driven AI development extends these principles to the AI prompting layer — spending 30–40% of project time on a detailed spec file prevents vague AI outputs, token waste, and abandoned code. See **[Spec-Driven AI Development](../tools/spec-driven-ai.md)**.
+
 ---
 
 ## The Spec-First Principle

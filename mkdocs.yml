@@ -60,6 +60,7 @@ nav:
       - Spec-First Workflow: tmforum/spec-first.md
   - AI Tools & Playbooks:
       - Tool Landscape: tools/index.md
+      - Spec-Driven AI: tools/spec-driven-ai.md
       - GitHub Copilot: tools/github-copilot.md
       - Copilot CLI Plugin Guide: tools/copilot-plugin-guide.md
       - Copilot CLI Plugin Roadmap: tools/copilot-plugin-roadmap.md

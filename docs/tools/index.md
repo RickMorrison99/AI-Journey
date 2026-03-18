@@ -22,12 +22,16 @@ The four tool categories form a stack, not a competition. Each layer solves a di
 
 | Layer | Category | Primary value | When to reach for it |
 |---|---|---|---|
+| **Spec / Context** | Spec files + context dir | Prevent vague outputs, codify standards | Before any AI prompt — always |
 | **Inner loop / IDE** | GitHub Copilot | In-context autocomplete and inline suggestion | Writing code, YANG stubs, unit tests in the editor |
 | **Chat / reasoning** | LLM Chat (ChatGPT, Claude, Gemini) | Long-form reasoning, drafting, explanation | ADRs, incident summaries, architecture trade-offs |
 | **Agentic / multi-step** | Copilot CLI, Copilot Workspace, Devin | Multi-step autonomous action across files or CLI | YANG refactors, multi-file feature work, CLI command synthesis |
 | **Pipeline / automated** | Custom AI pipelines | Repeatable, spec-driven generation in CI/CD | YANG → code gen, OpenAPI stubs, config diff summaries |
 
 Everything feeds through the CI/CD pipeline. No AI output reaches production without passing the same quality gates as human-written code.
+
+!!! tip "Start with the spec"
+    Before reaching for any AI tool, write a spec file. Addy Osmani's research shows 30–40% of project time spent on specs prevents token waste, lowest-common-denominator outputs, and thrown-away code. See [Spec-Driven AI Development](spec-driven-ai.md).
 
 ### Navigation Guide
 

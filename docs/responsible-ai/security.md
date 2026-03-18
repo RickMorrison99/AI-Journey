@@ -450,3 +450,58 @@ The SAST finding rate comparison (AI-assisted vs. baseline) is the primary indic
 ---
 
 *Security concerns about AI-generated code or AI tooling should be escalated to the AI Champion immediately. Critical security findings in production code follow the standard security incident process, regardless of whether AI assistance was involved in generating the code.*
+
+---
+
+## Threat Modelling AI Systems — Adam Shostack's Framework
+
+### The Four Questions
+
+Adam Shostack's threat modelling framework answers four questions for every system you build:
+
+1. **What are we building?** — Draw a data flow diagram of the AI component: inputs, outputs, data stores, trust boundaries
+2. **What can go wrong?** — Apply STRIDE to enumerate threats systematically
+3. **What are we going to do about it?** — Mitigations for each threat
+4. **Did we do a good enough job?** — Review and sign-off
+
+Threat modelling is a **design activity** — it happens when you write the ADR, not after deployment.
+
+### STRIDE Applied to O&A Agentic AI
+
+| STRIDE Threat | AI/Agentic Example | O&A Mitigation |
+|---|---|---|
+| **Spoofing** | Prompt injection masquerading as legitimate input | Input sanitisation, system prompt separation, signed prompt templates |
+| **Tampering** | Adversarial input altering AI output (e.g., YANG comment injection) | Input validation, output schema enforcement, immutable prompt templates |
+| **Repudiation** | No audit trail of AI-generated network changes | Log all AI outputs with model version, prompt hash, timestamp — immutable audit log |
+| **Information Disclosure** | AI leaking NSO CDB contents, inventory data, credentials in output | Output scanning, PII/credential detection before logging or displaying, data classification rules |
+| **Denial of Service** | Prompt flooding, token exhaustion, pipeline saturation | Rate limiting on AI endpoints, token budget enforcement, circuit breakers |
+| **Elevation of Privilege** | Agentic tool granted more access than needed for task | Principle of least privilege on all agentic tool scopes, explicit ADR scope boundary |
+
+### Threat Model Template for O&A AI ADRs
+
+Every ADR for an agentic workflow must include a threat model section with:
+
+```
+## Threat Model
+
+### Data Flow
+[Brief description or ASCII diagram of data flow]
+
+### Trust Boundaries
+- Input source: [who/what provides input to the AI]
+- Output consumer: [who/what receives AI output]
+- External systems accessed: [APIs, databases, network devices]
+
+### STRIDE Assessment
+| Threat | Likelihood | Impact | Mitigation |
+|---|---|---|---|
+| [S] Prompt injection | Medium | High | Input sanitisation + system prompt separation |
+| [T] Output tampering | Low | High | Schema validation on all outputs |
+| [R] No audit trail | Low | Medium | Structured event logging (see observability.md) |
+| [I] Data disclosure | Medium | High | Output scanning + data classification tier check |
+| [D] Token exhaustion | Low | Medium | Budget enforcement + circuit breaker |
+| [E] Privilege escalation | Low | Critical | Least-privilege scope + ADR sign-off |
+
+### Residual Risk
+[What risks remain after mitigations, and why they are accepted]
+```

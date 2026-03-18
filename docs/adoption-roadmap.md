@@ -270,6 +270,19 @@ All of the following must be true to advance to Stage 3:
 
 ---
 
+!!! info "Kent Beck's 3X Model and the O&A Adoption Stages"
+    Kent Beck's **Explore → Expand → Extract** model maps directly to the O&A adoption journey:
+
+    | 3X Phase | O&A Stages | Optimal Behaviour |
+    |---|---|---|
+    | **Explore** | Stage 1–2 | Maximise learning, tolerate waste, run experiments, accept "hit or miss" — this is normal |
+    | **Expand** | Stage 3–4 | Standardise what works, reduce variance, invest in platform, grow usage deliberately |
+    | **Extract** | Stage 5 | Automate, measure ROI precisely, optimise cost (SCI), harvest stable value |
+
+    The most common dysfunction: applying **Extract** discipline (ROI tracking, strict governance) to **Explore** work, which kills learning. Or applying **Explore** looseness to **Extract** work, which wastes money. Match the governance model to the phase.
+
+---
+
 ## Stage 3: Practicing
 
 > *"AI tools are part of how we work — we have shared practices and are improving them."*

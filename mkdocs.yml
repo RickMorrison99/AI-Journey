@@ -51,6 +51,8 @@ nav:
       - Testing Discipline: msd-foundations/testing-discipline.md
       - Trunk-Based Dev: msd-foundations/trunk-based-dev.md
       - Evolutionary Architecture: msd-foundations/evolutionary-architecture.md
+      - Team Topologies: msd-foundations/team-topologies.md
+      - Legacy Modernisation: msd-foundations/legacy-modernisation.md
       - Cognitive Load: msd-foundations/cognitive-load.md
       - Engineering Principles: msd-foundations/engineering-principles.md
   - TM Forum & API-First:
@@ -67,17 +69,23 @@ nav:
       - Agentic Tools: tools/agentic-tools.md
       - LLM Chat: tools/llm-chat.md
       - Custom Pipelines: tools/custom-pipelines.md
+  - Strategy:
+      - Overview: strategy/index.md
+      - Wardley Mapping: strategy/wardley-mapping.md
+      - AI Transformation Playbook: strategy/ai-transformation.md
   - Measurement:
       - Overview: measurement/index.md
       - DORA Metrics: measurement/dora-metrics.md
       - SPACE Framework: measurement/space-framework.md
       - AI Adoption KPIs: measurement/ai-adoption-kpis.md
+      - Observability: measurement/observability.md
       - Self-Reporting Templates: measurement/self-reporting.md
       - Pipeline Telemetry: measurement/pipeline-telemetry.md
   - Responsible AI:
       - Overview: responsible-ai/index.md
       - Privacy: responsible-ai/privacy.md
       - Security: responsible-ai/security.md
+      - Algorithmic Accountability: responsible-ai/algorithmic-accountability.md
       - Environmental: responsible-ai/environmental.md
       - Market Concentration: responsible-ai/market-concentration.md
       - Global Transformation: responsible-ai/global-transformation.md

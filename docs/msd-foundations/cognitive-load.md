@@ -261,6 +261,23 @@ The highest-leverage documentation for cognitive load reduction in the O&A conte
 
 ---
 
+## Team Structure and Cognitive Load — Team Topologies
+
+Cognitive load is not just an individual concern — it is a team design constraint. Matthew
+Skelton and Manuel Pais formalise this in *Team Topologies*: the primary purpose of team
+structure is to minimise extraneous cognitive load on stream-aligned delivery teams.
+
+For O&A, the AI adoption risk is real: adopting multiple AI tools (Copilot, LLM chat, agentic
+workflows, custom pipelines) simultaneously increases extraneous cognitive load before the
+benefits materialise. The Team Topologies response is to create a **platform team** that absorbs
+AI infrastructure complexity — Ollama deployment, prompt libraries, CI gates — and delivers it
+as a service.
+
+See **[Team Topologies for O&A](team-topologies.md)** for the full framework and recommended
+starting structure.
+
+---
+
 ## AI Adoption Success Metrics for Cognitive Load
 
 **The primary success metric for AI adoption is not velocity. It is cognitive load.**

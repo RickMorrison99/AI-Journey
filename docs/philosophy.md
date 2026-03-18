@@ -257,6 +257,191 @@ catalogue is O&A's canonical source of contracts, consumed before any service is
 
 ---
 
+### Matthew Skelton & Manuel Pais — Team Topologies & Cognitive Team Design
+
+**Affiliation/Role:** Matthew Skelton: founder, Conflux; Manuel Pais: co-author and IT Revolution
+Press contributor.
+
+**Core ideas:** Skelton and Pais define four team types (stream-aligned, enabling,
+complicated-subsystem, and platform) and three interaction modes (collaboration, X-as-a-Service,
+and facilitating). Conway's Law is not a problem to solve but a design tool to exploit — the
+architecture will mirror the communication structure, so design the communication structure you
+want first. Cognitive load is the primary constraint on team capability, not headcount or tooling.
+Fast flow requires explicit team boundaries and deliberately limited interaction.
+
+**Key works:** *Team Topologies* (2019); *Fast Flow* newsletter.
+
+**O&A application:** The O&A team's AI adoption is bounded by cognitive load. Skelton and Pais
+provide the vocabulary to restructure who owns what — an AI pipeline platform team versus
+stream-aligned automation squads — as AI complexity grows. Every new AI workstream in O&A should
+declare which team type it belongs to and which interaction mode it uses with adjacent teams.
+
+---
+
+### Simon Wardley — Wardley Mapping & Strategic Evolution
+
+**Affiliation/Role:** Independent strategist; formerly CSC and HMRC.
+
+**Core ideas:** All components of a system evolve through four stages: Genesis (novel/uncertain),
+Custom (understood), Product (repeatable), and Commodity (utility). Strategy requires mapping the
+landscape before choosing a move. Wardley distinguishes "doctrine" (universal good practice) from
+"context-specific gameplay." Competitive advantage comes from identifying what is still in Genesis
+while competitors treat it as Commodity.
+
+**Key works:** *Wardley Maps* (Creative Commons); "An Introduction to Wardley Mapping" (blog
+series).
+
+**O&A application:** Wardley Mapping lets O&A position each AI tool on the evolution axis — LLM
+APIs are moving from Custom to Product; YANG code generation is still Genesis/Custom. The map
+answers the build-vs-buy-vs-consume question with rigour rather than hype, and exposes which
+capabilities O&A must develop in-house versus which it should consume as commodity services.
+
+---
+
+### Charity Majors — Observability-Driven Development
+
+**Affiliation/Role:** Co-founder and CTO, Honeycomb.io; formerly Facebook and Parse.
+
+**Core ideas:** Observability is not monitoring. Monitoring tells you when something is wrong;
+observability lets you ask any question about system state without having predicted the question in
+advance. "You build it, you run it" requires high-cardinality telemetry, not dashboards. Shipping to
+production is the only test that matters — the feedback loop must close in production, not in a
+staging environment.
+
+**Key works:** *Observability Engineering* (2022, with Fong-Jones and Chen); "Observability — A
+3-Year Retrospective" (blog).
+
+**O&A application:** AI-generated code in network automation must be observable from day one.
+Majors' high-cardinality event model is the right mental model for NETCONF operation telemetry, NSO
+service audit logs, and AI pipeline outputs — not just metrics dashboards. Every agentic workflow in
+O&A must define its observability contract before it reaches production.
+
+---
+
+### Kent Beck — Test-Driven Development & the 3X Model
+
+**Affiliation/Role:** Independent; creator of Extreme Programming; co-creator of the Agile
+Manifesto.
+
+**Core ideas:** TDD (Red-Green-Refactor) is a design discipline, not merely a testing strategy.
+Software development has three distinct phases with different optimal behaviours: **Explore**
+(discover what works — maximise learning, tolerate waste), **Expand** (scale what works — optimise
+for growth), and **Extract** (harvest stable value — optimise for efficiency and cost). Shifting
+strategy between phases is the most common source of engineering dysfunction — teams apply Extract
+discipline during Explore, killing learning.
+
+**Key works:** *Test-Driven Development: By Example* (2003); *Extreme Programming Explained*
+(2000); "3X: Explore/Expand/Extract" (blog series).
+
+**O&A application:** The O&A AI adoption stages map directly to 3X — Stages 1–2 are Explore
+(experiment, tolerate prompt waste), Stages 3–4 are Expand (standardise what works), Stage 5 is
+Extract (automate, measure ROI). Treating Stage 1 with Stage 5 discipline kills learning; treating
+Stage 5 with Stage 1 looseness wastes money. Beck's model gives O&A the vocabulary to defend
+deliberate experimentation to stakeholders who want immediate ROI evidence.
+
+---
+
+### Andrew Ng — AI Transformation & Systematic Adoption
+
+**Affiliation/Role:** Founder, DeepLearning.AI and Landing AI; formerly Google Brain and Baidu.
+
+**Core ideas:** AI adoption in enterprises follows a predictable transformation playbook: execute
+pilot projects, build in-house AI capability, develop AI strategy, then develop internal and
+external communications — in that order, not the reverse. Most AI value comes from automating
+specific tasks within existing workflows, not from building general AI. Technical debt in data
+pipelines is the primary blocker to AI value delivery.
+
+**Key works:** *AI Transformation Playbook* (2018, Landing AI); *Machine Learning Yearning* (free
+online); Coursera Machine Learning Specialisation.
+
+**O&A application:** Ng's pilot-first, capability-building approach validates the O&A phased
+roadmap. His emphasis on data pipeline quality maps directly to the O&A principle of fixing
+telemetry and YANG model hygiene before layering AI on top — an organisation cannot AI its way out
+of bad data. The playbook sequence also explains why O&A builds internal AI literacy (Stage 2)
+before seeking governance sign-off on agentic tools (Stage 4).
+
+---
+
+### Joy Buolamwini — Algorithmic Justice & Bias Auditing
+
+**Affiliation/Role:** Founder, Algorithmic Justice League; MIT Media Lab researcher.
+
+**Core ideas:** AI systems encode and amplify the biases present in their training data and in the
+social structures of their creators. The "coded gaze" describes how AI systems reflect the
+perspective of their makers, often invisibly. Bias is not a bug to patch but a design choice to
+interrogate. Algorithmic auditing — testing AI outputs across demographic and geographic dimensions
+— is a professional obligation, not an optional add-on.
+
+**Key works:** *Unmasking AI* (2023); "Gender Shades" research (2018); AJL audit framework.
+
+**O&A application:** Network automation AI affects service quality and fault prioritisation across
+customer segments. Buolamwini's audit framework applies directly: do AI-prioritised fault queues
+systematically deprioritise certain regions or customer types? Testing for algorithmic fairness in
+NOC automation is an O&A governance obligation, not an academic exercise.
+
+---
+
+### Cathy O'Neil — Weapons of Math Destruction & Algorithmic Accountability
+
+**Affiliation/Role:** Data scientist and mathematician; founder, ORCAA (algorithmic auditing firm).
+
+**Core ideas:** Algorithms that affect people's lives — scoring, prioritising, classifying — can
+cause large-scale harm when they are opaque, self-reinforcing, and unaccountable. Three conditions
+create a Weapon of Math Destruction: opacity (people cannot see how it works), scale (it affects
+many people), and damage (it causes real harm). Accountability requires impact assessment before
+deployment, not after.
+
+**Key works:** *Weapons of Math Destruction* (2016); ORCAA audit methodology.
+
+**O&A application:** Automated network fault handling, SLA prioritisation, and resource allocation
+driven by AI are subject to O'Neil's WMD test: are they opaque? Do they scale? Could they harm
+customers? O&A's ADR process and human-in-the-loop rules (Principles 13 and 15) are the direct
+mitigation — every agentic workflow must answer the three WMD questions before approval.
+
+---
+
+### Adam Shostack — Threat Modelling for Software Systems
+
+**Affiliation/Role:** Independent; formerly Microsoft (SDL threat modelling) and Mozilla; adjunct
+faculty.
+
+**Core ideas:** Threat modelling answers four questions: (1) What are we building? (2) What can go
+wrong? (3) What are we going to do about it? (4) Did we do a good enough job? STRIDE (Spoofing,
+Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege) provides
+a structured enumeration of threat types. Crucially, threat modelling is a design activity, not a
+security review — it happens at architecture time, not after deployment.
+
+**Key works:** *Threat Modeling: Designing for Security* (2014); *Threats: What Every Engineer
+Should Learn from Star Wars* (2023).
+
+**O&A application:** Every agentic AI workflow in O&A has a threat model: the AI agent is a new
+attack surface (prompt injection maps to Spoofing/Tampering; training data leakage maps to
+Information disclosure; a runaway agent maps to DoS). Shostack's four-question framework should be
+the default required section in every O&A ADR for agentic tools, completed at design time.
+
+---
+
+### Michael Feathers — Working Effectively with Legacy Code
+
+**Affiliation/Role:** Independent consultant and author; formerly ObjectMentor.
+
+**Core ideas:** Legacy code is code without tests — not necessarily old code. The primary challenge
+of legacy systems is making changes safely without full understanding of the codebase. "Seams" —
+places where behaviour can be altered without modifying existing code — are the key to introducing
+testability incrementally. Characterisation tests (tests that record existing behaviour without
+judging it) enable safe refactoring as a precursor to replacement.
+
+**Key works:** *Working Effectively with Legacy Code* (2004); "Getting Empirical about Refactoring"
+(conference talks).
+
+**O&A application:** O&A inherits decades of legacy OSS/BSS code. Feathers' seam-based approach is
+the bridge between that legacy and AI-assisted modernisation: write characterisation tests first,
+then use AI to generate refactored replacements that must pass those tests. AI without a
+characterisation test safety net on legacy code introduces high-risk, unverifiable changes. The
+Strangler Fig pattern combined with Feathers' approach is the preferred O&A migration strategy.
+
+---
+
 ## How These Ideas Connect
 
 At first glance, Modern Software Delivery, Responsible AI, and TM Forum engineering excellence look
@@ -269,16 +454,29 @@ AI to generate more untested code, faster. A team without trunk-based developmen
 produce more long-lived branches. A team without SoC will use AI to entangle concerns at greater
 scale. Farley, Fowler, Forsgren, Kim, and Humble provide the foundation-building playbook. The DORA
 metrics give O&A an objective ceiling measurement before AI is introduced, so productivity claims
-after introduction can be validated rather than assumed.
+after introduction can be validated rather than assumed. Skelton and Pais extend the foundation
+layer into team structure — cognitive load is not just a developer concern but a structural
+constraint that determines which team can safely own which AI pipeline. Beck's 3X model then
+clarifies *how* to behave at each maturity stage, preventing the common mistake of applying Extract
+discipline during Explore. Feathers completes the engineering picture by providing the concrete
+seam-based technique for safely modernising the legacy OSS/BSS codebase that AI must interoperate
+with. Majors adds the operational corollary: fast flow without high-cardinality observability
+produces speed without learning.
 
 Responsible AI (Gebru, Crawford, Currie, Mollick) then addresses what happens when that amplifier
 is pointed at systems that affect people. A high-performing pipeline can ship a biased model faster;
 a carbon-efficient architecture still has a carbon cost; a co-intelligent team still needs to decide
-who bears risk when AI output is wrong. TM Forum's Open APIs and eTOM/TAM/ODA provide the
+who bears risk when AI output is wrong. Buolamwini and O'Neil sharpen this lens from abstract
+ethics into operational tests — algorithmic auditing and WMD assessment — that every O&A agentic
+workflow must pass before production. Shostack translates the same principle into the security
+domain: every AI agent is a new attack surface, and threat modelling at design time is the O&A
+default, not a retrospective audit. TM Forum's Open APIs and eTOM/TAM/ODA provide the
 domain-specific contract layer — ensuring that AI-generated code integrates with a standards-based
-ecosystem rather than accumulating proprietary integration debt. The result is not three frameworks
-bolted together, but a single engineering philosophy: **go fast, go safe, go sustainably, with
-standards that outlast any individual tool or vendor.**
+ecosystem rather than accumulating proprietary integration debt. Ng and Wardley supply the strategic
+layer that sits above engineering: where are our AI tools on the evolution curve, what should be
+built versus consumed, and in what sequence do we build capability? The result is not four
+frameworks bolted together, but a single engineering philosophy: **go fast, go safe, go
+sustainably, with standards and strategy that outlast any individual tool or vendor.**
 
 ---
 
@@ -295,3 +493,12 @@ standards that outlast any individual tool or vendor.**
 | *Building Microservices* | Sam Newman | Service boundary and API design guidance; aligns with TM Forum Open API decomposition |
 | *Atlas of AI* | Kate Crawford | Environmental and labour critique of AI systems; grounds O&A's responsible-AI risk assessment |
 | *Co-Intelligence* | Ethan Mollick | Practical framing for human-AI collaboration; the jagged frontier concept informs all O&A AI review gates |
+| *Team Topologies* | Matthew Skelton & Manuel Pais | Team structure and cognitive load model; informs how O&A partitions AI platform vs. stream-aligned ownership |
+| *Wardley Maps* | Simon Wardley | Strategic evolution mapping; the build-vs-buy-vs-consume framework for O&A AI tool decisions |
+| *Observability Engineering* | Charity Majors, Liz Fong-Jones & Charity Chen | High-cardinality observability model; defines the telemetry standard for O&A agentic workflows |
+| *Test-Driven Development: By Example* | Kent Beck | TDD as design discipline; foundational for AI-assisted code generation quality gates |
+| *AI Transformation Playbook* | Andrew Ng | Pilot-first adoption sequence; validates the O&A phased roadmap and capability-building order |
+| *Unmasking AI* | Joy Buolamwini | Algorithmic bias and audit framework; grounds O&A fairness testing for fault-prioritisation AI |
+| *Weapons of Math Destruction* | Cathy O'Neil | WMD test (opacity, scale, damage) for algorithmic systems; required pre-deployment checklist for O&A AI |
+| *Threat Modeling: Designing for Security* | Adam Shostack | STRIDE and 4-question framework; mandatory ADR section for every O&A agentic tool |
+| *Working Effectively with Legacy Code* | Michael Feathers | Seam-based approach and characterisation tests; the O&A strategy for AI-assisted OSS/BSS modernisation |

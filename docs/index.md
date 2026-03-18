@@ -31,12 +31,13 @@ Choose the path that fits your role right now:
 
 ## Our Foundations
 
-The framework draws on eleven thought leaders across two domains:
+The framework draws on twenty thought leaders across three domains:
 
 | Domain | Thinkers |
 |---|---|
-| **Modern Software Delivery** | Dave Farley · Martin Fowler · Gregor Hohpe · Holly Cummins · Nicole Forsgren · Gene Kim · Jez Humble |
-| **Responsible AI** | Timnit Gebru · Kate Crawford · Anne Currie · Ethan Mollick · Sam Newman |
+| **Modern Software Delivery / Engineering** | Dave Farley · Martin Fowler · Gregor Hohpe · Holly Cummins · Nicole Forsgren · Gene Kim · Jez Humble · Sam Newman · Kent Beck · Matthew Skelton & Manuel Pais · Michael Feathers · Charity Majors |
+| **Responsible AI / Ethics** | Timnit Gebru · Kate Crawford · Anne Currie · Ethan Mollick · Joy Buolamwini · Cathy O'Neil · Adam Shostack |
+| **Strategy & Adoption** | Andrew Ng · Simon Wardley |
 
 Full profiles, key works, and their specific relevance to O&A are in the
 [Philosophy & Thought Leadership](philosophy.md) document.
@@ -88,4 +89,4 @@ O&A evaluates every AI tool and workflow against five responsible-AI dimensions:
 
 ## Site Stats
 
-**37 documents · ~15,000 lines · Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)**
+**37 documents · ~15,000 lines · 20 thought leaders · Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)**

@@ -1,0 +1,25 @@
+{
+  "hooks": [
+    {
+      "event": "pre-commit",
+      "name": "oa-security-check",
+      "description": "Check for hardcoded credentials, NSO CDB references, and device IP addresses in staged files",
+      "script": "scripts/pre-commit-security.sh",
+      "failOnError": true
+    },
+    {
+      "event": "pre-commit",
+      "name": "yang-validate",
+      "description": "Validate any staged YANG files with pyang if available",
+      "script": "scripts/yang-validate.sh",
+      "failOnError": false
+    },
+    {
+      "event": "post-checkout",
+      "name": "oa-journey-reminder",
+      "description": "Remind the team member of their current adoption stage and daily principles",
+      "script": "scripts/journey-reminder.sh",
+      "failOnError": false
+    }
+  ]
+}

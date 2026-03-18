@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "oa-docs": {
+      "description": "O&A AI Journey framework documentation — 48 docs covering MSD foundations, TM Forum APIs, AI tools, measurement, responsible AI, and governance",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/docs"],
+      "env": {
+        "DOCS_ROOT": "${PLUGIN_DIR}/../../docs"
+      },
+      "notes": "Replace with your deployed docs URL when running mkdocs serve or gh-pages"
+    },
+    "tmforum-apis": {
+      "description": "TM Forum Open API specifications — TMF630, TMF639, TMF641, TMF645, TMF648, TMF651, TMF652, TMF674",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "env": {
+        "ALLOWED_DOMAINS": "tmforum.org,github.com/tmforum-apis"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "oa-ai-journey",
+  "description": "AI-Agentic adoption framework for the OSS - Orchestration and Automation team. Grounded in Modern Software Delivery, TM Forum standards, and Responsible AI governance.",
+  "version": "1.0.0",
+  "author": {
+    "name": "O&A Platform Team",
+    "email": "oa-platform@example.com"
+  },
+  "license": "MIT",
+  "keywords": ["telecom", "network-automation", "yang", "tmforum", "ai-adoption", "osa", "netconf", "nso"],
+  "homepage": "https://github.com/RickMorrison99/AI-Journey",
+  "agents": "agents/",
+  "skills": "skills/",
+  "hooks": "hooks.json",
+  "mcpServers": ".mcp.json"
+}

@@ -4,17 +4,34 @@ site_author: "O&A Team"
 
 theme:
   name: material
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
-    primary: indigo
-    accent: blue
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.top
     - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy
+
+extra_css:
+  - stylesheets/rogers.css
 
 plugins:
   - search

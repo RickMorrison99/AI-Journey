@@ -1,0 +1,280 @@
+/*
+ * Rogers Communications-inspired theme for O&A AI Adoption Journey
+ * Brand colours: Rogers Red #DA1A32, Charcoal #1C1C1C, White #FFFFFF
+ * Accent: #A8001E (dark red), Surface: #F5F5F5
+ */
+
+/* ── Core palette overrides ───────────────────────────────────────────── */
+:root {
+  --md-primary-fg-color:          #DA1A32;
+  --md-primary-fg-color--light:   #E84D62;
+  --md-primary-fg-color--dark:    #A8001E;
+  --md-primary-bg-color:          #FFFFFF;
+  --md-primary-bg-color--light:   rgba(255,255,255,0.7);
+
+  --md-accent-fg-color:           #DA1A32;
+  --md-accent-fg-color--transparent: rgba(218,26,50,0.1);
+  --md-accent-bg-color:           #FFFFFF;
+
+  --md-typeset-a-color:           #DA1A32;
+
+  --rogers-red:                   #DA1A32;
+  --rogers-red-dark:              #A8001E;
+  --rogers-red-light:             #F5C6CC;
+  --rogers-charcoal:              #1C1C1C;
+  --rogers-surface:               #F7F7F7;
+  --rogers-border:                #E0E0E0;
+}
+
+/* ── Header / nav bar ─────────────────────────────────────────────────── */
+.md-header {
+  background-color: var(--rogers-charcoal) !important;
+  border-bottom: 3px solid var(--rogers-red);
+}
+
+.md-header__title {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Nav tabs */
+.md-tabs {
+  background-color: var(--rogers-red) !important;
+}
+
+.md-tabs__link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #FFFFFF !important;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+/* ── Sidebar / navigation ─────────────────────────────────────────────── */
+.md-nav__title {
+  color: var(--rogers-charcoal);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--rogers-red) !important;
+}
+
+.md-nav__link--active {
+  font-weight: 600;
+  border-left: 3px solid var(--rogers-red);
+  padding-left: 0.5rem;
+}
+
+/* ── Search ───────────────────────────────────────────────────────────── */
+.md-search__form {
+  border-radius: 4px;
+}
+
+.md-search-result__link:hover,
+.md-search-result__link:focus {
+  background-color: rgba(218,26,50,0.08);
+}
+
+/* ── Content area ─────────────────────────────────────────────────────── */
+.md-content {
+  background-color: #FFFFFF;
+}
+
+/* Page heading underline */
+.md-typeset h1 {
+  color: var(--rogers-charcoal);
+  border-bottom: 3px solid var(--rogers-red);
+  padding-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  color: var(--rogers-charcoal);
+  border-bottom: 1px solid var(--rogers-border);
+  padding-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.md-typeset h3 {
+  color: var(--rogers-red-dark);
+  font-weight: 600;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--rogers-red);
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  color: var(--rogers-red-dark);
+  text-decoration: underline;
+}
+
+/* ── Tables ───────────────────────────────────────────────────────────── */
+.md-typeset table:not([class]) th {
+  background-color: var(--rogers-charcoal);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: var(--rogers-surface);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(218,26,50,0.05);
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--rogers-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ── Code blocks ──────────────────────────────────────────────────────── */
+.md-typeset pre {
+  border-left: 4px solid var(--rogers-red);
+  border-radius: 0 4px 4px 0;
+}
+
+.md-typeset code {
+  background-color: #FFF0F2;
+  color: var(--rogers-red-dark);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+}
+
+.md-typeset pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* ── Admonitions ──────────────────────────────────────────────────────── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 4px;
+  border-left-width: 4px;
+}
+
+/* Note → Rogers blue-grey */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-left-color: var(--rogers-charcoal);
+}
+
+.md-typeset .admonition.note > .admonition-title,
+.md-typeset details.note > summary {
+  background-color: rgba(28,28,28,0.08);
+}
+
+/* Warning → Rogers red */
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-left-color: var(--rogers-red);
+}
+
+.md-typeset .admonition.warning > .admonition-title,
+.md-typeset details.warning > summary {
+  background-color: rgba(218,26,50,0.1);
+  color: var(--rogers-red-dark);
+}
+
+/* Tip → darker red */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-left-color: var(--rogers-red-dark);
+}
+
+/* Info */
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-left-color: #555;
+}
+
+/* ── Footer ───────────────────────────────────────────────────────────── */
+.md-footer {
+  background-color: var(--rogers-charcoal);
+}
+
+.md-footer-meta {
+  background-color: #111111;
+}
+
+.md-footer__link:hover {
+  color: var(--rogers-red-light);
+}
+
+/* ── Buttons / tags ───────────────────────────────────────────────────── */
+.md-typeset .md-button {
+  background-color: var(--rogers-red);
+  border-color: var(--rogers-red);
+  color: #FFFFFF;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.md-typeset .md-button:hover {
+  background-color: var(--rogers-red-dark);
+  border-color: var(--rogers-red-dark);
+}
+
+/* ── Table of contents ────────────────────────────────────────────────── */
+.md-nav--secondary .md-nav__link--active {
+  color: var(--rogers-red) !important;
+  border-left: 2px solid var(--rogers-red);
+}
+
+/* ── Back-to-top button ───────────────────────────────────────────────── */
+.md-top {
+  background-color: var(--rogers-red);
+  color: #FFFFFF;
+}
+
+/* ── Scrollbar accent (webkit) ────────────────────────────────────────── */
+::-webkit-scrollbar-thumb {
+  background-color: var(--rogers-red);
+  border-radius: 4px;
+}
+
+/* ── Dark mode support ────────────────────────────────────────────────── */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #DA1A32;
+  --md-primary-fg-color--light: #E84D62;
+  --md-primary-fg-color--dark:  #A8001E;
+  --md-accent-fg-color:         #DA1A32;
+  --md-typeset-a-color:         #E84D62;
+  --md-default-bg-color:        #1A1A1A;
+  --md-default-fg-color:        #EBEBEB;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #0D0D0D !important;
+  border-bottom: 3px solid var(--rogers-red);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: #FFFFFF;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: #E0E0E0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: rgba(218,26,50,0.15);
+  color: #E84D62;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: #2A2A2A;
+}

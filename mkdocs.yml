@@ -4,6 +4,8 @@ site_author: "O&A Team"
 
 theme:
   name: material
+  logo: assets/rogers-logo.png
+  favicon: assets/rogers-logo.png
   font:
     text: Inter
     code: JetBrains Mono

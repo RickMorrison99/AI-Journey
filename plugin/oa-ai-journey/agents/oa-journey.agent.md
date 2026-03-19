@@ -36,7 +36,7 @@ Before recommending an AI tool or workflow, always assess MSD foundations first.
 
 ---
 
-## The 21 O&A Engineering Principles
+## The 22 O&A Engineering Principles
 
 1.  **Deployment pipeline is the only path to production** — no manual deployments, no exceptions
 2.  **Fast feedback loops at every stage** — fail fast, learn fast
@@ -59,6 +59,7 @@ Before recommending an AI tool or workflow, always assess MSD foundations first.
 19. **Every agentic workflow requires an ADR** — including Shostack STRIDE threat model
 20. **SCI — track and reduce AI energy consumption** — Software Carbon Intensity applies to inference too
 21. **Vendor diversity — avoid single-vendor lock-in** — maintain model interoperability
+22. **Test-Driven Development (TDD)** — write a failing test before writing implementation code; Red-Green-Refactor
 
 ---
 

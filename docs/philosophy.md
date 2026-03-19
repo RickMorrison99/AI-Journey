@@ -337,7 +337,9 @@ discipline during Explore, killing learning.
 (experiment, tolerate prompt waste), Stages 3–4 are Expand (standardise what works), Stage 5 is
 Extract (automate, measure ROI). Treating Stage 1 with Stage 5 discipline kills learning; treating
 Stage 5 with Stage 1 looseness wastes money. Beck's model gives O&A the vocabulary to defend
-deliberate experimentation to stakeholders who want immediate ROI evidence.
+deliberate experimentation to stakeholders who want immediate ROI evidence. His TDD discipline
+(Red-Green-Refactor) is encoded as Principle 22 — the safety net that makes AI-assisted code
+generation trustworthy: write a failing test first, then prompt the AI to make it pass.
 
 ---
 

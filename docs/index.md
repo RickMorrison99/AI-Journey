@@ -44,7 +44,7 @@ Full profiles, key works, and their specific relevance to O&A are in the
 
 ---
 
-## 21 Principles
+## 22 Principles
 
 These principles are the backbone of every decision in this framework. They are not aspirational
 slogans — each one is operationalised in at least one section of this site.
@@ -70,6 +70,7 @@ slogans — each one is operationalised in at least one section of this site.
 19. Every agentic workflow requires an ADR
 20. SCI — track and reduce AI energy consumption
 21. Vendor diversity — avoid single-vendor lock-in
+22. Test-Driven Development — write a failing test before writing implementation code
 
 ---
 
@@ -89,4 +90,4 @@ O&A evaluates every AI tool and workflow against five responsible-AI dimensions:
 
 ## Site Stats
 
-**37 documents · ~15,000 lines · 20 thought leaders · Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)**
+**48 documents · ~21,000 lines · 20 thought leaders · 22 principles · Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)**

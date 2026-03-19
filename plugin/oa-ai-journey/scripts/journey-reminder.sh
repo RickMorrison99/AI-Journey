@@ -32,10 +32,11 @@ PRINCIPLES=(
   "Principle 19: Every agentic workflow requires an ADR — including a Shostack STRIDE threat model."
   "Principle 20: SCI — track and reduce AI energy consumption. Software Carbon Intensity applies to inference."
   "Principle 21: Vendor diversity — avoid single-vendor lock-in. Maintain model interoperability."
+  "Principle 22: Test-Driven Development (TDD) — write a failing test before writing implementation code. Red-Green-Refactor."
 )
 
 # Pick a random principle
-RANDOM_INDEX=$(( RANDOM % 21 ))
+RANDOM_INDEX=$(( RANDOM % 22 ))
 TODAY_PRINCIPLE="${PRINCIPLES[$RANDOM_INDEX]}"
 
 echo ""

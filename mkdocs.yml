@@ -74,6 +74,8 @@ nav:
       - Legacy Modernisation: msd-foundations/legacy-modernisation.md
       - Cognitive Load: msd-foundations/cognitive-load.md
       - Engineering Principles: msd-foundations/engineering-principles.md
+      - Flow Metrics: msd-foundations/flow-metrics.md
+      - Epics & Stories: msd-foundations/agile-stories.md
   - TM Forum & API-First:
       - Overview: tmforum/index.md
       - eTOM / TAM / ODA: tmforum/etom-tam-oda.md
@@ -108,6 +110,7 @@ nav:
       - Environmental: responsible-ai/environmental.md
       - Market Concentration: responsible-ai/market-concentration.md
       - Global Transformation: responsible-ai/global-transformation.md
+      - NFR Framework: responsible-ai/nfr-framework.md
   - Governance:
       - Team Norms: governance/team-norms.md
       - ADR Template: governance/adr-template.md

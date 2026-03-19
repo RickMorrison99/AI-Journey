@@ -444,6 +444,277 @@ Strangler Fig pattern combined with Feathers' approach is the preferred O&A migr
 
 ---
 
+### David J. Anderson — The Kanban Method & Flow Efficiency
+
+**Affiliation/Role:** Founder of Lean Kanban University; author and consultant; creator of the
+Kanban Method for software development.
+
+**Core ideas:** Anderson adapted Kanban from Toyota's production system and applied it to knowledge
+work in 2007 at Microsoft. His key insight is that work-in-progress (WIP) limits are not
+constraints — they are the primary lever for improving flow. Limiting WIP exposes the real blockers
+in a system, forces a team to finish before starting, and makes cycle time predictable. Anderson also
+introduced *classes of service* (standard, fixed-date, expedite, intangible) as a way to make
+scheduling decisions transparent and policy-based rather than political.
+
+**Key works:** *Kanban: Successful Evolutionary Change for Your Technology Business* (2010);
+*Essential Kanban Condensed* (with Andy Carmichael).
+
+**O&A application:** Network automation work spans very different classes of service — a P1 fault
+automation fix is an expedite item; a YANG schema refactor is intangible. Anderson's class-of-service
+model gives the O&A team a policy for managing these competing priorities without constant
+re-negotiation.
+
+---
+
+### Don Reinertsen — Product Development Flow & Cost of Delay
+
+**Affiliation/Role:** President of Reinertsen & Associates; adjunct professor; advisor to product
+development organisations worldwide.
+
+**Core ideas:** Reinertsen's *Principles of Product Development Flow* (2009) is the definitive
+economic treatment of lean product development. His central concept is *cost of delay* (CoD): the
+value destroyed per unit of time by not delivering a feature. Without quantifying CoD, teams cannot
+make rational prioritisation decisions — they default to politics or the squeaky wheel. Reinertsen
+also demonstrated that large batch sizes are the primary driver of queue formation, unpredictable
+cycle times, and compounding risk — a result with direct implications for story sizing and sprint
+length. His application of Little's Law to product development makes the relationship between WIP,
+cycle time, and throughput mathematically precise.
+
+**Key works:** *Principles of Product Development Flow* (2009); *Managing the Design Factory* (1997).
+
+**O&A application:** Every agentic workflow decision in O&A has an implicit cost of delay — a
+fault-detection AI that is delayed by two sprints of re-prioritisation has a measurable network
+impact. Reinertsen's framework gives O&A the vocabulary to make that cost explicit in sprint
+planning.
+
+---
+
+### Daniel Vacanti — Actionable Agile Metrics & Probabilistic Forecasting
+
+**Affiliation/Role:** Independent consultant; creator of the ActionableAgile analytics tool;
+co-founder of ProKanban.org.
+
+**Core ideas:** Vacanti's contribution is making flow metrics *actionable* rather than merely
+descriptive. His work centres on three charts: the cycle time scatter plot (how long did individual
+items take?), the throughput histogram (how many items per week?), and the cumulative flow diagram
+(what is the WIP trend over time?). His key innovation is the application of Monte Carlo simulation
+to forecasting: instead of estimating individual story points, teams use their historical throughput
+distribution to produce probabilistic delivery forecasts (e.g., "85% confidence we complete 20 items
+in the next 4 weeks"). This makes forecasting honest and resistant to gaming.
+
+**Key works:** *Actionable Agile Metrics for Predictability* (2015); *When Will It Be Done?* (2019).
+
+**O&A application:** O&A can replace sprint velocity commitments with throughput-based Monte Carlo
+forecasts for release planning — giving stakeholders honest probability ranges rather than false
+point estimates. This is especially valuable when AI-assisted work has high variance in completion
+time.
+
+---
+
+### Henrik Kniberg — Lean Agile Thinking & the Spotify Model
+
+**Affiliation/Role:** Independent agile/lean coach; formerly Spotify; author and practitioner.
+
+**Core ideas:** Kniberg is best known for documenting the *Spotify model* (tribes, squads, chapters,
+guilds) as a scaling approach, though he consistently emphasises it was never intended as a
+prescriptive framework. His deeper contribution is in *visualising flow* — making work, blockers,
+and WIP visible through simple boards and lightweight ceremonies. His definition of *done-done*
+(feature complete, tested, deployed, monitored, and operated by the team that built it) challenges
+the common pattern of "done" meaning merely merged to main. He also wrote *Lean from the Trenches*,
+a candid account of Lean/Kanban adoption at the Swedish Police, showing that flow principles work
+outside software teams.
+
+**Key works:** *Lean from the Trenches* (2011); Spotify Engineering Culture videos (Parts 1 & 2);
+numerous blog posts on scrum vs kanban, MVP thinking, and product ownership.
+
+**O&A application:** Kniberg's *done-done* definition directly challenges O&A's tendency to mark
+stories as done at merge time, before operational validation. For AI-generated code specifically,
+"done" should mean observed-in-production, not merged — aligning with Charity Majors' observability
+principle.
+
+---
+
+### Allen Holub — Flow-First Agile & No Estimates
+
+**Affiliation/Role:** Independent consultant, educator, and author; long-time programming educator
+and agile practitioner.
+
+**Core ideas:** Holub is one of the most provocative voices in modern agile practice, arguing that
+most agile implementations are fake — they adopted the ceremonies without the values. His "No
+Estimates" position holds that estimating story points adds no value and actively harms teams by
+making deadlines real, encouraging unhealthy velocity competition, and diverting time from actual
+delivery. Instead, he advocates for counting stories (which should all be small and approximately
+equal in size), measuring throughput, and communicating in probabilities. His broader argument is
+that teams should optimise for continuous flow, not sprint cadence, and that story conversations —
+not written acceptance criteria — are the primary quality mechanism.
+
+**Key works:** Numerous conference talks and Twitter threads; "No Estimates" (ongoing public writing);
+"Real Agility" workshops.
+
+**O&A application:** Holub's critique of velocity targets is directly relevant to O&A AI adoption:
+using AI to inflate story point velocity is a vanity metric trap. The O&A measurement framework
+(throughput, flow efficiency, cycle time) aligns with Holub's flow-first approach.
+
+---
+
+### Mary & Tom Poppendieck — Lean Software Development
+
+**Affiliation/Role:** Independent consultants; pioneers of applying lean manufacturing principles
+to software development.
+
+**Core ideas:** The Poppendiecks' *Lean Software Development* (2003) was the first systematic
+application of Toyota Production System thinking to software. They identified seven types of
+software waste (*muda*): partially done work, extra processes, extra features, task switching,
+waiting, motion, and defects — each of which maps to a specific engineering anti-pattern. Their
+principle of *deciding as late as possible* (maintain optionality until the last responsible moment)
+and *amplifying learning* (short feedback cycles as a primary design goal) directly inform the
+evolutionary architecture and TDD practices in this framework. They also articulated *seeing the
+whole* — the system perspective that prevents local optimisation at the expense of end-to-end flow.
+
+**Key works:** *Lean Software Development: An Agile Toolkit* (2003); *Implementing Lean Software
+Development* (2006); *Leading Lean Software Development* (2009).
+
+**O&A application:** The Poppendiecks' waste catalogue is a practical review tool for O&A AI
+workflows: AI-generated code that bypasses review is "defect" waste; partially automated NETCONF
+workflows that require manual intervention are "partially done work"; over-specified tickets are
+"extra processes."
+
+---
+
+### Mike Cohn — User Stories & the INVEST Criteria
+
+**Affiliation/Role:** Founder of Mountain Goat Software; author and agile trainer.
+
+**Core ideas:** Cohn's *User Stories Applied* (2004) established the canonical form and quality
+criteria for user stories. The **INVEST** criteria — Independent, Negotiable, Valuable, Estimable,
+Small, Testable — remain the practical checklist used by agile teams worldwide to evaluate story
+quality before committing to work. Cohn's framing emphasises that a user story is not a
+specification; it is a placeholder for a conversation. He also developed the *story mapping* technique
+(horizontal axis = user journey; vertical axis = priority), which provides the structure for
+decomposing epics into releasable slices.
+
+**Key works:** *User Stories Applied* (2004); *Agile Estimating and Planning* (2005).
+
+**O&A application:** INVEST criteria apply directly to AI-assisted story writing in O&A: AI can
+generate syntactically valid stories that fail Negotiable (over-specified) or Testable (no
+acceptance criteria). The INVEST checklist is the human review gate on every AI-drafted ticket.
+
+---
+
+### Ron Jeffries — XP, the 3 Cs & Story Conversations
+
+**Affiliation/Role:** Co-creator of Extreme Programming (XP); independent author and practitioner.
+
+**Core ideas:** Jeffries coined the **3 Cs** — Card, Conversation, Confirmation — as the three
+essential components of a user story. The *Card* is a brief description (the reminder); the
+*Conversation* is the discussion between the team and the product owner (the real knowledge
+transfer); the *Confirmation* is the acceptance test (the verifiable outcome). His key warning is
+that teams mistake the Card for the entire story and skip the Conversation — leading to over-specified
+tickets that transfer knowledge but destroy collaboration. Jeffries is also a strong advocate of
+YAGNI (You Ain't Gonna Need It) and test-driven development, and has latterly become one of the
+sharpest critics of "Dark Scrum" — Scrum adopted without its values.
+
+**Key works:** *Extreme Programming Installed* (2001); *The Nature of Software Development* (2015);
+extensive blog writing at ronjeffries.com.
+
+**O&A application:** The 3 Cs critique is especially pointed when AI writes stories: AI produces
+Cards with no Conversation and inferred Confirmation. O&A must treat AI-generated stories as draft
+Cards only, requiring a mandatory Conversation ceremony before sprint entry.
+
+---
+
+### Marty Cagan — Empowered Product Teams & Continuous Discovery
+
+**Affiliation/Role:** Founder of Silicon Valley Product Group (SVPG); former VP Product at eBay,
+Netscape; author and coach.
+
+**Core ideas:** Cagan's *Inspired* redefined what a high-performing product team looks like. His
+central critique is the *feature factory* — a team that takes a backlog of features from stakeholders
+and builds them without any discovery, producing output without outcomes. Empowered product teams,
+by contrast, own a problem to solve and have the autonomy to discover how to solve it. Cagan
+advocates for continuous product discovery — ongoing customer/user interviews, hypothesis testing,
+and outcome measurement — as the precursor to any story writing. His OKR integration model connects
+team-level stories to measurable outcomes, not just feature delivery counts.
+
+**Key works:** *Inspired: How to Create Tech Products Customers Love* (2008, updated 2017); *Empowered:
+Ordinary People, Extraordinary Products* (2020); SVPG blog.
+
+**O&A application:** O&A risks becoming a feature factory for network automation requests from
+operations teams. Cagan's framework insists that O&A should own the problem ("reduce MTTR for
+fault detection by 30%") not just the features, and should use discovery to validate that an AI
+automation actually solves the problem before scaling it.
+
+---
+
+### Teresa Torres — Continuous Discovery & Opportunity Solution Trees
+
+**Affiliation/Role:** Product discovery coach; author; founder of Product Talk.
+
+**Core ideas:** Torres' *Continuous Discovery Habits* provides the most systematic modern framework
+for product discovery. Her *opportunity solution tree* (OST) gives teams a visual structure: the
+desired outcome at the top, opportunities (customer problems/needs) as branches, solutions as leaves,
+and experiments as tests of assumptions. The OST prevents teams from jumping directly to solutions
+and makes the full discovery chain visible. Torres insists on *weekly customer touchpoints* — at
+least one interview per week — as the minimum cadence for continuous discovery.
+
+**Key works:** *Continuous Discovery Habits* (2021); productboard/product-talk blog.
+
+**O&A application:** For O&A, the "customer" of automation tooling is the network operations team.
+An OST for "Reduce manual NETCONF configuration errors" would branch into opportunities (lack of
+schema validation, no diff review, slow approval cycles) before any story is written. This prevents
+the O&A team from building automation solutions for problems operations does not actually have.
+
+---
+
+### Michael Nygard — Stability Patterns for Production Systems
+
+**Affiliation/Role:** Principal engineer and architect; author; advocate for production-ready
+software.
+
+**Core ideas:** Nygard's *Release It!* (2007, updated 2018) catalogues the stability patterns that
+separate software that survives production from software that requires constant babysitting. His
+core insight is that failures cascade: a slow external service causes thread pools to fill, which
+causes request queues to back up, which causes memory pressure, which causes the entire application
+to fail — not just the feature using the slow service. The countermeasures — **circuit breakers**
+(trip after N failures, fast-fail until recovery), **timeouts** (every external call must have one),
+**bulkheads** (isolate failure domains), and **back pressure** (signal to callers when you are
+overloaded) — are the canonical NFR checklist for any distributed system. Nygard coined the term
+*integration point* as the primary source of production instability.
+
+**Key works:** *Release It! Design and Deploy Production-Ready Software* (2007, 2nd ed. 2018).
+
+**O&A application:** Every O&A AI pipeline is an integration point cluster: LLM inference API,
+NETCONF device connections, NSO service activation, TM Forum API calls. All of them require circuit
+breakers, timeouts, and bulkheads. A stalled LLM call must not block NETCONF provisioning; a device
+connection timeout must not cascade into a service activation failure.
+
+---
+
+### Len Bass, Paul Clements & Rick Kazman — Software Architecture & Quality Attributes
+
+**Affiliation/Role:** Senior researchers and practitioners at Carnegie Mellon University's Software
+Engineering Institute (SEI); authors of the most widely used software architecture textbook.
+
+**Core ideas:** *Software Architecture in Practice* established the canonical framework for thinking
+about architecture as the set of structures that satisfy quality attributes (non-functional
+requirements). Their **Quality Attribute Workshop (QAW)** is a structured facilitated process for
+eliciting NFRs as *quality attribute scenarios* — each scenario specifies a source, stimulus,
+artifact, environment, response, and response measure, making NFRs testable rather than aspirational.
+Bass, Clements, and Kazman also introduced the *Architecture Trade-off Analysis Method (ATAM)*,
+which evaluates architectural decisions against competing quality attribute priorities. Their work
+grounds the industry practice of treating NFRs as architectural drivers, not afterthoughts.
+
+**Key works:** *Software Architecture in Practice* (4th ed. 2021); *Documenting Software
+Architectures* (2010); SEI technical reports on ADD, ATAM, and QAW.
+
+**O&A application:** Every new AI-assisted automation capability in O&A has implicit quality
+attributes: the latency budget for a zero-touch provisioning action, the availability requirement
+for a fault-detection pipeline, the maintainability requirement for AI-generated YANG configs. The
+QAW process gives O&A a structured way to make these explicit before architecture decisions lock
+them in.
+
+---
+
 ## How These Ideas Connect
 
 At first glance, Modern Software Delivery, Responsible AI, and TM Forum engineering excellence look
